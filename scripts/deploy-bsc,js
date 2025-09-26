@@ -1,0 +1,15 @@
+const { ethers } = require("hardhat");
+
+async function main() {
+  const [deployer] = await ethers.getSigners();
+  console.log("Deployer:", deployer.address);
+
+  const Celini = await ethers.getContractFactory("CeliniToken");
+  const token = await Celini.deploy();
+  await token.waitForDeployment();
+
+  const addr = await token.getAddress();
+  console.log("CeliniToken deployed to:", addr);
+}
+
+main().catch((e) => { console.error(e); process.exit(1); });
