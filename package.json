@@ -1,0 +1,18 @@
+{
+  "name": "celini",
+  "version": "1.0.0",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "build": "hardhat compile",
+    "test": "hardhat test",
+    "lint": "echo \"(add solhint/eslint if desired)\"",
+    "deploy:bsc": "node scripts/deploy-bsc.js",
+    "verify:bsc": "node scripts/verify-bscscan.js"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.0"
+  }
+}
